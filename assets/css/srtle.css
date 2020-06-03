@@ -4,7 +4,8 @@
   src: url("../fonts/DINNextLTArabic-Regular.ttf"); }
 input:focus,
 select:focus,
-textarea:focus {
+textarea:focus,
+button:focus {
   outline: 0 !important; }
 
 body {
@@ -15,7 +16,7 @@ body {
   clear: both; }
 
 .fixed-navbar {
-  background-color: #106C5F !important;
+  background-color: #106c5f !important;
   transition: all 1s ease-in-out !important; }
 
 .uppernav .navbar {
@@ -46,9 +47,7 @@ body {
   height: 600px; }
   .header .content {
     width: 50%;
-    position: absolute;
-    right: 10%;
-    top: 30%; }
+    padding-top: 180px; }
     .header .content h5 {
       color: #1abcdf;
       font-size: 30px;
@@ -144,16 +143,82 @@ body {
   .how-it-work .how-it-content .how-png-img img {
     width: 45%; }
 .how-it-work .how-it-content .how-par-cont {
-  margin-top: 10px;
+  margin-top: 30px;
   margin-right: 20px; }
   .how-it-work .how-it-content .how-par-cont h5 {
     color: #106b5e;
     font-weight: bold;
     font-size: 25px; }
 
+.show-application {
+  margin-top: 70px; }
+  .show-application .show-header {
+    text-align: center; }
+    .show-application .show-header h5 {
+      margin-bottom: 0 !important; }
+    .show-application .show-header p {
+      color: #c3c3c3; }
+  .show-application .app-slider {
+    margin-top: 40px; }
+    .show-application .app-slider img {
+      margin: auto;
+      cursor: zoom-in; }
+    .show-application .app-slider .slick-slide:focus {
+      outline: 0 !important; }
+    .show-application .app-slider .slick-slide img {
+      width: 240px; }
+    .show-application .app-slider .slick-prev {
+      z-index: 99; }
+      .show-application .app-slider .slick-prev::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f053" !important;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #1abcdf;
+        border-radius: 50%;
+        font-size: 14px; }
+    .show-application .app-slider .slick-next {
+      z-index: 99; }
+      .show-application .app-slider .slick-next::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f054" !important;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #1abcdf;
+        border-radius: 50%;
+        font-size: 14px; }
+
+.download {
+  text-align: center;
+  margin-top: 90px;
+  padding-bottom: 40px; }
+  .download .down-btn p {
+    font-size: 30px;
+    max-width: 50%;
+    margin: auto;
+    font-weight: bold;
+    margin-bottom: 20px; }
+  .download .down-btn a img {
+    width: 150px;
+    margin-top: 10px; }
+
+@media (min-width: 2560px) {
+  .avenges .adv-img img {
+    float: left;
+    margin-left: -206px; } }
 @media (max-width: 1024px) {
   .uppernav .navbar .navbar-nav {
     margin-right: 2px; }
+    .uppernav .navbar .navbar-nav .nav-item .nav-link {
+      font-size: 15px; }
 
   .header {
     background-position: right; } }
@@ -172,7 +237,7 @@ body {
       margin-right: 0; }
   .uppernav .navbar .navbar-nav {
     text-align: right;
-    margin-right: 0; }
+    margin-right: 19px; }
     .uppernav .navbar .navbar-nav .nav-item .nav-link {
       width: 100%; }
 
@@ -188,11 +253,15 @@ body {
     padding-right: 0;
     margin-top: 30px; }
     .avenges .adv-content .adv-content-img .content-img img {
-      width: 80px !important; }
+      width: 80px; }
     .avenges .adv-content .adv-content-img .content-content {
       margin-top: 5px; }
       .avenges .adv-content .adv-content-img .content-content p {
-        font-size: 13px; } }
+        font-size: 13px; }
+
+  .about .about-img img {
+    width: 56%;
+    margin-top: 9px; } }
 @media (max-width: 524px) {
   .header {
     background-position: right; }
@@ -200,8 +269,24 @@ body {
       width: 100%; }
 
   .how-it-work .how-it-img img {
-    width: 100%; } }
-.avenges .adv-header, .about .about-header h5, .how-it-work .how-content-header h5 {
+    width: 100%; }
+  .how-it-work .how-par-cont {
+    margin-top: 10px !important; }
+
+  .app-slider .slick-next {
+    right: 10px !important; }
+  .app-slider .slick-prev {
+    left: 10px !important; }
+
+  .download .down-btn p {
+    max-width: 100% !important; }
+
+  .adv-content {
+    padding-right: 0;
+    margin-top: 30px; }
+    .adv-content .adv-content-img .content-img img {
+      width: 68px !important; } }
+.avenges .adv-header, .about .about-header h5, .how-it-work .how-content-header h5, .show-application .show-header h5 {
   color: #106b5e;
   font-size: 30px;
   font-weight: bold;

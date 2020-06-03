@@ -8,7 +8,8 @@ $mainColor: #106b5e;
 
 input,
 select,
-textarea {
+textarea,
+button {
   &:focus {
     outline: 0 !important;
   }
@@ -23,9 +24,8 @@ body {
   clear: both;
 }
 
-
-.fixed-navbar{
-  background-color: #106C5F !important;
+.fixed-navbar {
+  background-color: #106c5f !important;
   transition: all 1s ease-in-out !important;
 }
 
@@ -71,9 +71,10 @@ body {
   height: 600px;
   .content {
     width: 50%;
-    position: absolute;
-    right: 10%;
-    top: 30%;
+    // position: absolute;
+    // right: 10%;
+    // top: 30%;
+    padding-top: 180px;
     h5 {
       color: #1abcdf;
       font-size: 30px;
@@ -156,54 +157,53 @@ body {
   }
   .about-content {
     margin-top: 15px;
-    p{
+    p {
       font-weight: 600;
     }
-    .btn{
+    .btn {
       background-color: $mainColor;
       border-radius: 15px;
-      a{
+      a {
         color: #fff;
         text-decoration: none;
       }
     }
   }
-  .about-img{
-    img{
+  .about-img {
+    img {
       width: 100%;
       margin-top: -80px;
     }
   }
 }
 
-
 // start how-it-work
-.how-it-work{
-  .how-content-header{
+.how-it-work {
+  .how-content-header {
     margin-top: 100px;
     margin-bottom: 70px;
-    h5{
+    h5 {
       @extend %sectionHeader;
       margin-bottom: 0 !important;
     }
-    p{
+    p {
       position: relative;
       color: #c3c3c3;
-      &::after{
+      &::after {
         @extend %afterSectionHeader;
       }
     }
   }
-  
-  .how-it-img{
+
+  .how-it-img {
     margin-top: 90px;
   }
 
-  .how-it-content{
-    &>div{
+  .how-it-content {
+    & > div {
       float: right;
     }
-    .how-png-img{
+    .how-png-img {
       margin-top: 20px;
       border: 1px solid #eaeaea;
       border-radius: 50%;
@@ -213,7 +213,7 @@ body {
       text-align: center;
       line-height: 90px;
       position: relative;
-      .number{
+      .number {
         width: 30px;
         height: 30px;
         line-height: 30px;
@@ -225,14 +225,14 @@ body {
         right: -13px;
         top: 25px;
       }
-      img{
+      img {
         width: 45%;
       }
     }
-    .how-par-cont{
-      margin-top: 10px;
+    .how-par-cont {
+      margin-top: 30px;
       margin-right: 20px;
-      h5{
+      h5 {
         color: $mainColor;
         font-weight: bold;
         font-size: 25px;
@@ -241,15 +241,112 @@ body {
   }
 }
 
+// start show
+.show-application {
+  margin-top: 70px;
+  .show-header {
+    text-align: center;
+    h5 {
+      @extend %sectionHeader;
+      margin-bottom: 0 !important;
+    }
+    p {
+      color: #c3c3c3;
+    }
+  }
+  .app-slider {
+    margin-top: 40px;
+    img {
+      margin: auto;
+      cursor: zoom-in;
+    }
+    .slick-slide {
+      &:focus {
+        outline: 0 !important;
+      }
+      img {
+        width: 240px;
+      }
+    }
+    .slick-prev {
+      z-index: 99;
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f053" !important;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #1abcdf;
+        border-radius: 50%;
+        font-size: 14px;
+      }
+    }
+    .slick-next {
+      z-index: 99;
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f054" !important;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #1abcdf;
+        border-radius: 50%;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// start download
+.download {
+  text-align: center;
+  margin-top: 90px;
+  padding-bottom: 40px;
+  .down-btn {
+    p {
+      font-size: 30px;
+      max-width: 50%;
+      margin: auto;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    a {
+      img {
+        width: 150px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
 
 
-
+@media(min-width: 2560px){
+  .avenges{
+    .adv-img{
+      img{
+        float: left;
+        margin-left: -206px;
+      }
+    }
+  }
+}
 
 @media (max-width: 1024px) {
   .uppernav {
     .navbar {
       .navbar-nav {
         margin-right: 2px;
+        .nav-item{
+          .nav-link{
+            font-size: 15px;
+          }
+        }
       }
     }
   }
@@ -278,7 +375,7 @@ body {
       }
       .navbar-nav {
         text-align: right;
-        margin-right: 0;
+        margin-right: 19px;
         .nav-item {
           .nav-link {
             width: 100%;
@@ -306,7 +403,7 @@ body {
       .adv-content-img {
         .content-img {
           img {
-            width: 80px !important;
+            width: 80px;
           }
         }
         .content-content {
@@ -315,6 +412,14 @@ body {
             font-size: 13px;
           }
         }
+      }
+    }
+  }
+  .about {
+    .about-img {
+      img {
+        width: 56%;
+        margin-top: 9px;
       }
     }
   }
@@ -327,16 +432,43 @@ body {
       width: 100%;
     }
   }
-  .how-it-work{
-    .how-it-img{
-      img{
+  .how-it-work {
+    .how-it-img {
+      img {
         width: 100%;
+      }
+    }
+    .how-par-cont {
+      margin-top: 10px !important;
+    }
+  }
+  .app-slider {
+    .slick-next {
+      right: 10px !important;
+    }
+    .slick-prev {
+      left: 10px !important;
+    }
+  }
+  .download {
+    .down-btn {
+      p {
+        max-width: 100% !important;
+      }
+    }
+  }
+  .adv-content {
+    padding-right: 0;
+    margin-top: 30px;
+    .adv-content-img {
+      .content-img {
+        img {
+          width: 68px !important;
+        }
       }
     }
   }
 }
-
-
 
 %sectionHeader {
   color: $mainColor;
