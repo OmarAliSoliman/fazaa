@@ -14,6 +14,13 @@ $(document).ready(function(){
   })
 
 
+  if($('.header-slider').length){
+    $('.header-slider').slick({
+      arrows: true,
+    })
+  }
+
+
   $('.app-slider').slick({
     arrows: true,
     speed: 500,
